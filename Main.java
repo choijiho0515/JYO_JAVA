@@ -1,17 +1,26 @@
+package org.example;
+
+class Person {
+    String name;
+    int age;
+
+    public Person(String inputName, int inputAge) {
+        name = inputName;
+        age = inputAge;
+
+    }
+
+    void hello() {
+        System.out.println("hello");
+    }
+}
+
 public class Main {
-
     public static void main(String[] args) {
-        char asciiChar = 'A';
+        Person person =new Person("h662", 18);
 
-        System.out.println("Character: " + asciiChar);
 
-        int asciiCode = (int) asciiChar;
-        System.out.println("Ascii Code: " + asciiCode);
 
-        char koreanChar = '가';
-        System.out.println("character: " + koreanChar);
-        int unicodeCode = (int) koreanChar;
-        System.out.println("Unicode Code: U+" + Integer.toHexString(unicodeCode)
-                .toUpperCase());
+        person.hello();
     }
 }
