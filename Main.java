@@ -1,26 +1,33 @@
-package org.example;
+interface Animal {
+    void makeSound();
+}
 
-class Person {
-    String name;
-    int age;
-
-    public Person(String inputName, int inputAge) {
-        name = inputName;
-        age = inputAge;
-
+class Dog implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("멍멍!");
     }
 
-    void hello() {
-        System.out.println("hello");
+    public static void makeLoud() {
+        System.out.println("으르르깡깡!");
+    }
+}
+public class  Main {
+    public static void main(String[] Args) {
+
+        Animal dog = new Dog();
+
+        dog.makeSound();
+
+        if (dog instanceof Dog) {
+            Dog newDog = new  Dog();
+
+            newDog.makeLoud();
+        }
+
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        Person person =new Person("h662", 18);
 
 
 
-        person.hello();
-    }
-}
